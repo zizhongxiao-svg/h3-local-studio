@@ -1,0 +1,6 @@
+queue/
+outputs/
+*.mp4
+!recipes/**/episodes/**/preview/*.mp4
+__pycache__/
+_staging/

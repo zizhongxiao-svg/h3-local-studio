@@ -1,0 +1,44 @@
+h3-local-studio
+Copyright (c) 2026 h3-local-studio contributors
+
+The code and documents in this repository are released under the MIT License (see LICENSE).
+The repository bundles no third-party engine, model weights or fonts. It calls, or explains how to use,
+the third-party works below. Each stays under its own licence; you install them yourself and accept their terms.
+
+
+1. WanGP (formerly Wan2GP) - https://github.com/deepbeepmeep/WanGP
+   Licence: WanGP Community License 2.0.
+   Not bundled and not modified. tools/h3_server.py only calls WanGP's public Python API
+   (shared.api: init / submit_task). Install WanGP from its official repository.
+
+
+2. MiniMax H3 - MiniMaxAI
+   Licence: MiniMax H3 Community License Agreement.
+
+   MiniMax H3 is licensed under the MiniMax H3 Community License Agreement, Copyright © 2026 MiniMax. All Rights Reserved.
+
+   - The model weights are not bundled. You download them yourself (through WanGP) and accept the licence.
+   - The licence excludes these territories: the European Union, the United Kingdom, South Korea and the
+     United States. Check that you may use the model where you are.
+   - Acceptable Use Policy (Exhibit A of the licence), in particular:
+     * Label AI-generated content (§12). Every public video made with this workflow must carry an
+       AI-generated label; the CCTV recipe burns "内容由AI生成 · 纯属虚构演绎" into its vertical cut.
+       China's rules on labelling AI-generated content apply as well.
+     * Do not infringe intellectual property (characters, music, footage, likenesses you have no rights to).
+     * Do not impersonate real people.
+
+
+3. FastH3 Omni 8-step
+   Step-distilled MiniMax H3 by FastVideo; weights packaged for WanGP by DeepBeepMeep on Hugging Face.
+   Used through WanGP under the MiniMax H3 licence above; not bundled.
+
+
+4. Character face-library method (docs/04-workflow.md)
+   The method (bone structure -> features -> temperament, identity anchors, controlled flaws) comes from the
+   public WeChat article "GPT Image 2.5 做 Seedance 2.5 角色脸型库" by 远见明察 (2026-11).
+   The face-block template in this repository is our own adaptation of that method.
+
+
+5. Optional tools you install yourself, each under its own licence:
+   ffmpeg; OpenCV and the YuNet face-detection model from opencv_zoo; faster-whisper and its Whisper models;
+   pypinyin; any CJK font you pass to recipes/cctv/cctv_post.py.
